@@ -47,7 +47,7 @@ public class ChatBot {
 //        randomQ[3] = "Apa hobimu ?";
 //        randomQ[4] = "Kamu berapa bersaudara ?";
 //        randomQ[5] = "Kamu masih sekolah atau sudah kuliah ?";
-//        randomQ[6] = "Ohh. . ";     
+//        randomQ[6] = "Ohh. . ";
 //        randomQ[7] = "Bagaimana cuaca disana?";
 
         System.out.println("Regina : Hai, nama saya Regina, Siapa nama kamu ?");
@@ -59,7 +59,8 @@ public class ChatBot {
         //nama user
         fixnama = printnama[printnama.length - 1];
         if (nama.split(".").length == 1 || nama.split(",").length == 1) {
-            System.out.println("Regina : Hai " + fixnama + " " + openingQ.get(temp));
+            System.out.println("Regina : Hai " + fixnama + " " + openingQ.get(
+                    temp));
             System.out.print(fixnama + " : ");
             pertanyaan = s.nextLine();
         }
@@ -72,14 +73,15 @@ public class ChatBot {
                 System.out.println("Regina Has Left The Chat");
                 break;
             }
-            int temp2 = r.nextInt(randomQ.size()-1);
+            int temp2 = r.nextInt(randomQ.size() - 1);
             String respon = "";
             if (pertanyaan.toLowerCase().contains("siapa")) {
                 System.out.println("masuk ke siapa");
                 count2++;
                 if (pertanyaan.toLowerCase().contains("kamu")) {
                     if (pertanyaan.toLowerCase().contains("nama")) {//untuk klo nanya nama botnya lagi.
-                        respon = "Kan dah kubilang tadi namaku Regina. Gimana sih? Koq bisa lupa? ";
+                        respon
+                                = "Kan dah kubilang tadi namaku Regina. Gimana sih? Koq bisa lupa? ";
                     } else if (pertanyaan.toLowerCase().contains("sama")) {
                         respon = "Ihh. . . Kepo banget sihh. . .";
                     } else if (pertanyaan.toLowerCase().contains("tinggal")) {
@@ -88,7 +90,8 @@ public class ChatBot {
                 } else {
 
                 }
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat ke user
                 } else {
                     //nanya buat ke si bot
@@ -102,7 +105,8 @@ public class ChatBot {
             } else if (pertanyaan.toLowerCase().contains("kapan")) {
                 System.out.println("masuk ke kapan");
                 count2++;
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat user
                 } else {
                     //nanya buat si bot
@@ -110,21 +114,25 @@ public class ChatBot {
             } else if (pertanyaan.toLowerCase().contains("dimana")) {
                 System.out.println("masuk ke dimana");
                 count2++;
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat user
                     respon = "iih kan ga tau kan lagi ga bareng";
                 } else if (pertanyaan.toLowerCase().contains("kamu")) {
                     //nanya buat si bot
                     if (pertanyaan.toLowerCase().contains("lagi")) {
                         respon = "Di. . hatimu. . .";
-                    } else if (pertanyaan.toLowerCase().contains("rumah") || pertanyaan.toLowerCase().contains("tinggal")) {
+                    } else if (pertanyaan.toLowerCase().contains("rumah")
+                            || pertanyaan.toLowerCase().contains("tinggal")) {
                         respon = "Rumahku di Jalan Surya Sumantri 65 Bandung";
                     }
                 }
-            } else if (pertanyaan.toLowerCase().contains("mengapa") || pertanyaan.toLowerCase().contains("kenapa")) {
+            } else if (pertanyaan.toLowerCase().contains("mengapa")
+                    || pertanyaan.toLowerCase().contains("kenapa")) {
                 System.out.println("masuk ke mengapa");
                 count2++;
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat user
                     if (pertanyaan.toLowerCase().contains("sedih")) {
                         respon = "ihhhhh kasian, sini ditemenin";
@@ -141,13 +149,16 @@ public class ChatBot {
                         respon = "ih kepo ... :P";
                     }
                 }
-            } else if (pertanyaan.toLowerCase().contains("bagaimana") || pertanyaan.toLowerCase().contains("gimana")) {
+            } else if (pertanyaan.toLowerCase().contains("bagaimana")
+                    || pertanyaan.toLowerCase().contains("gimana")) {
                 System.out.println("masuk ke bagaimana");
                 count2++;
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat user
                 } else {
-                    if (pertanyaan.toLowerCase().contains("keadaan") || pertanyaan.toLowerCase().contains("kondisi")) {
+                    if (pertanyaan.toLowerCase().contains("keadaan")
+                            || pertanyaan.toLowerCase().contains("kondisi")) {
                         respon = "ga enak badan nihhhhh";
                     }
                 }
@@ -157,18 +168,21 @@ public class ChatBot {
             } else if (pertanyaan.toLowerCase().contains("apa")) {
                 System.out.println("masuk ke apa");
                 count2++;
-                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.toLowerCase().contains("aku")) {
+                if (pertanyaan.toLowerCase().contains("saya") || pertanyaan.
+                        toLowerCase().contains("aku")) {
                     //nanya buat user
                 } else if (pertanyaan.toLowerCase().contains("kamu")) {
                     //nanya buat si bot
-                    if (pertanyaan.toLowerCase().contains("lagi") || pertanyaan.toLowerCase().contains("sedang")) {
+                    if (pertanyaan.toLowerCase().contains("lagi") || pertanyaan.
+                            toLowerCase().contains("sedang")) {
                         respon = "Lagi chat sama kamu.";
                     } else if (pertanyaan.toLowerCase().contains("suka")) {
                         respon = "Hmmm. . . Suka kamu. . .";
                     }
                 }
             } else if (pertanyaan.toLowerCase().contains("maaf")) {                 //untuk klo minta maaf.
-                respon = "Iya dimaafin. Jangan diulangin lagi ya. Btw, " + randomQ.remove(temp2);
+                respon = "Iya dimaafin. Jangan diulangin lagi ya. Btw, "
+                        + randomQ.remove(temp2);
             } else if (pertanyaan.toLowerCase().contains("lagi")) {
                 respon = "Semangat yah ...";
             } else if (pertanyaan.toLowerCase().contains("makan")) {
@@ -179,8 +193,8 @@ public class ChatBot {
 //                respon = "Regina : Maaf aku ga ngerti maksud kamu. Coba ulangi lagi dong.";
                 respon = randomQ.remove(temp2);
             }
-            System.out.println("cek size : "+randomQ.size());
-            System.out.println("cek random : "+temp2);
+            System.out.println("cek size : " + randomQ.size());
+            System.out.println("cek random : " + temp2);
 //            System.out.println("cek respon : "+respon);
 
             if (count2 == 3) {
@@ -192,34 +206,43 @@ public class ChatBot {
                 System.out.println("Regina : " + respon);
                 if (respon != "" && respon != null) {
                     if (respon.toLowerCase().contains("cuaca")) {
-                        System.out.print(fixnama+" : ");
+                        System.out.print(fixnama + " : ");
                         pertanyaan = s.nextLine();
                         if (pertanyaan.toLowerCase().contains("cerah")) {
-                            System.out.println("Regina : secerah wajah kamu ya??");;
+                            System.out.println(
+                                    "Regina : secerah wajah kamu ya??");;
                         } else if (pertanyaan.toLowerCase().contains("mendung")) {
-                            System.out.println("Regina : Semoga hati kamu ga ikut mendung ya. . .");
+                            System.out.println(
+                                    "Regina : Semoga hati kamu ga ikut mendung ya. . .");
                         } else if (pertanyaan.toLowerCase().contains("gerimis")) {
-                            System.out.println("Regina : Kalau mau keluar, bawa payung ya " + fixnama + ", klo ga nanti kamu sakit. .");
+                            System.out.println(
+                                    "Regina : Kalau mau keluar, bawa payung ya "
+                                    + fixnama + ", klo ga nanti kamu sakit. .");
                         } else if (pertanyaan.toLowerCase().contains("hujan")) {
-                            System.out.println("Regina : Semoga cepat reda biar kita cepat ketemu^_^");
+                            System.out.println(
+                                    "Regina : Semoga cepat reda biar kita cepat ketemu^_^");
                         } else {
                             System.out.println("Regina : Cuaca macam apa itu?");
                         }
                     } else if (respon.toLowerCase().contains("kuliah")) {
-                        System.out.print(fixnama+" : ");
+                        System.out.print(fixnama + " : ");
                         pertanyaan = s.nextLine();
                         if (pertanyaan.toLowerCase().contains("jurusan")) {
-                            System.out.println("Regina : Wiii keren aku juga mau masuk jurusan itu");
+                            System.out.println(
+                                    "Regina : Wiii keren aku juga mau masuk jurusan itu");
                         } else if (pertanyaan.toLowerCase().contains("sekolah")) {
-                            System.out.println("Regina : Kamu ternyata masih muda yahhhh");
+                            System.out.println(
+                                    "Regina : Kamu ternyata masih muda yahhhh");
                         }
                     } else if (respon.toLowerCase().contains("lembang")) {
-                        System.out.print(fixnama+" : ");
+                        System.out.print(fixnama + " : ");
                         pertanyaan = s.nextLine();
                         if (pertanyaan.toLowerCase().contains("ayo pergi")) {
-                            System.out.println("Regina : Yu pergi bareng, katanya disana bagus pemandangan ");
+                            System.out.println(
+                                    "Regina : Yu pergi bareng, katanya disana bagus pemandangan ");
                         } else if (pertanyaan.toLowerCase().contains("bosen")) {
-                            System.out.println("Regina : Ya udh kamu maunya kemana?");
+                            System.out.println(
+                                    "Regina : Ya udh kamu maunya kemana?");
                         }
                     }
                 }
@@ -248,7 +271,7 @@ public class ChatBot {
 //bla : exit
 //Regina : Kamu berapa bersaudara ?
 //bla : 2
-//Regina : Ohh. . 
+//Regina : Ohh. .
 //bla : ohh. .
 //Regina : Kamu berapa bersaudara ?
 //bla : 2
@@ -259,4 +282,4 @@ public class ChatBot {
 //masuk ke apa
 //bla : tak papa
 //masuk ke apa
-//bla : 
+//bla :
